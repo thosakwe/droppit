@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css">
+    <style>
+        html, body, #upload {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #uploadList {
+            margin-top: 2em;
+        }
+
+        .dragover {
+            border: dashed teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui menu">
+        <a class="item">Droppit</a>
+    </div>
+    <div id="upload">
+        <div class="ui container">
+            <h1 id="emptyUploadTitle" class="ui title">
+                Drag and Drop Files to Share
+            </h1>
+            <h1 id="selectedUploadTitle" class="ui title" style="display: none">
+                0 Files Selected
+            </h1>
+            <div id="uploadButton" class="ui button">
+                <i class="cloud upload icon"></i>
+                Choose Files...
+            </div>
+            <div id="uploadContinueButton" class="ui positive button" style="display: none">
+                    <i class="check icon"></i>
+                Continue to Share
+            </div>
+            <input id="uploadInput" type="file" style="display: none" multiple>
+            <div id="uploadList" class="ui relaxed divided list" style="display: none"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/page@1.10.2/page.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.js"></script>
+    <script src="js/share_page.js"></script>
+    <script src="js/upload_page.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
